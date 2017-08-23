@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Orders" language="groovy" pageWidth="595" pageHeight="650" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="bc5384f7-3bf4-46e8-bc36-075c3c3194cf">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+*
+FROM
+ customer_order]]>
+	</queryString>
+	<field name="order_id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cus_id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="item_no" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="quantity" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="net_price" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="130" y="11" width="341" height="57" uuid="d038b545-79eb-4e1a-add9-1268ead31ae7"/>
+				<textElement>
+					<font fontName="Segoe UI Light" size="36" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Customer Orders]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="60" splitType="Stretch">
+			<staticText>
+				<reportElement x="42" y="10" width="100" height="20" uuid="277a20e2-b309-44c0-a2f7-8346d9b656f7"/>
+				<textElement>
+					<font fontName="Segoe UI Light" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[order_id	]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="142" y="10" width="100" height="20" uuid="0551a647-1154-4ada-ac4c-b0653f56505e"/>
+				<textElement>
+					<font fontName="Segoe UI Light" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[cus_id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="242" y="10" width="100" height="20" uuid="f5eb8c9f-dcfe-42dc-b990-6183d4ea1ba3"/>
+				<textElement>
+					<font fontName="Segoe UI Light" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[item_no]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="342" y="10" width="100" height="20" uuid="10ddfb66-3e1d-49a7-bc30-4e6350742185"/>
+				<textElement>
+					<font fontName="Segoe UI Light" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[quantity]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="442" y="10" width="67" height="20" uuid="02b40a52-eddd-4e1a-8ae8-2c3bf1035f7a"/>
+				<textElement>
+					<font fontName="Segoe UI Light" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[net_price]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="36" splitType="Stretch">
+			<textField>
+				<reportElement x="42" y="0" width="100" height="20" uuid="aa9b8464-f8f5-4e67-bb9f-d6afb58dfbfd"/>
+				<textElement>
+					<font fontName="Segoe UI Light" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{order_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="142" y="0" width="100" height="20" uuid="da4ccfd5-8207-4408-8c52-5baed351078a"/>
+				<textElement>
+					<font fontName="Segoe UI Light" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cus_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="242" y="0" width="100" height="20" uuid="9de11e22-810b-461c-a7a4-8489fc1340c6"/>
+				<textElement>
+					<font fontName="Segoe UI Light" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{item_no}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="342" y="0" width="100" height="20" uuid="8ff26087-fa4f-437b-88f2-a6744248a8b9"/>
+				<textElement>
+					<font fontName="Segoe UI Light" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{quantity}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="442" y="0" width="67" height="20" uuid="57784729-084f-4721-9631-0d2bb0f43fde"/>
+				<textElement>
+					<font fontName="Segoe UI Light" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{net_price}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

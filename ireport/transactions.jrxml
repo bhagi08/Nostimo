@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="transactions" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2e75b9b1-2d4a-44b8-90a0-b667427eb751">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+  *
+FROM
+     transactions]]>
+	</queryString>
+	<field name="transaction_id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cus_id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="room_charges" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="meal_charges" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="total_amount" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cash" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="balance" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="payment_type" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="313" y="0" width="215" height="58" uuid="19455dcc-309d-42ab-b625-fedeb8da22d6"/>
+				<textElement>
+					<font fontName="Segoe UI Light" size="36" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Transactions]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="2" y="0" width="100" height="20" uuid="1026776e-bfe3-4b7c-a939-6a0f318e0d43"/>
+				<textElement>
+					<font fontName="Segoe UI Light" size="14"/>
+				</textElement>
+				<text><![CDATA[transaction_id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="102" y="0" width="51" height="20" uuid="7f5d59d5-28f9-4803-bfcb-a8c6e8355694"/>
+				<textElement>
+					<font fontName="Segoe UI Light" size="14"/>
+				</textElement>
+				<text><![CDATA[cus_id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="169" y="0" width="98" height="20" uuid="3f19ffab-861d-47d1-9c12-989342228a36"/>
+				<textElement>
+					<font fontName="Segoe UI Light" size="14"/>
+				</textElement>
+				<text><![CDATA[room_charges]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="281" y="0" width="98" height="20" uuid="8838a157-2162-476a-966c-aa35d444932b"/>
+				<textElement>
+					<font fontName="Segoe UI Light" size="14"/>
+				</textElement>
+				<text><![CDATA[meal_charges]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="389" y="0" width="98" height="20" uuid="6101bbcb-5793-4623-bcca-7d2cdd69d58d"/>
+				<textElement>
+					<font fontName="Segoe UI Light" size="14"/>
+				</textElement>
+				<text><![CDATA[total_amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="502" y="0" width="73" height="20" uuid="60e835c7-3a36-4009-8d2e-3a8a0e8b9187"/>
+				<textElement>
+					<font fontName="Segoe UI Light" size="14"/>
+				</textElement>
+				<text><![CDATA[cash]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="602" y="0" width="74" height="20" uuid="37b25e21-e6fd-4b9d-ad97-2972d0794bd6"/>
+				<textElement>
+					<font fontName="Segoe UI Light" size="14"/>
+				</textElement>
+				<text><![CDATA[balance]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="702" y="0" width="100" height="20" uuid="91f06a27-1936-4084-83c9-df4f0ac89653"/>
+				<textElement>
+					<font fontName="Segoe UI Light" size="14"/>
+				</textElement>
+				<text><![CDATA[payment_type]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="37" splitType="Stretch">
+			<textField>
+				<reportElement x="2" y="0" width="98" height="20" uuid="44383e2c-a2e7-44d6-ab8a-b633e0799fdd"/>
+				<textElement>
+					<font fontName="Segoe UI Light" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{transaction_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="102" y="0" width="51" height="20" uuid="05d5965f-f264-4474-a322-815a390d4d8d"/>
+				<textElement>
+					<font fontName="Segoe UI Light" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cus_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="169" y="0" width="98" height="20" uuid="891aa086-56ca-47e7-b0f0-4c07df90074d"/>
+				<textElement>
+					<font fontName="Segoe UI Light" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{room_charges}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="281" y="0" width="98" height="20" uuid="3bccaff3-80d0-4b6a-ae5b-d87978f1c818"/>
+				<textElement>
+					<font fontName="Segoe UI Light" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{meal_charges}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="389" y="0" width="98" height="20" uuid="56d5a8a7-774c-428c-bb82-9adb1fae00f8"/>
+				<textElement>
+					<font fontName="Segoe UI Light" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{total_amount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="502" y="0" width="73" height="20" uuid="3c8d1da9-318e-4c32-a5aa-c669ea4923d1"/>
+				<textElement>
+					<font fontName="Segoe UI Light" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cash}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="602" y="0" width="74" height="20" uuid="d7539f60-5688-478a-92b5-00c711b7ecdb"/>
+				<textElement>
+					<font fontName="Segoe UI Light" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{balance}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="704" y="0" width="98" height="20" uuid="e3642e64-abd7-493e-b871-5de26a39741e"/>
+				<textElement>
+					<font fontName="Segoe UI Light" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{payment_type}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="2" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

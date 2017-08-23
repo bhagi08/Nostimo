@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Foods" language="groovy" pageWidth="595" pageHeight="650" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="21af382b-dad8-4b21-be1d-0404ac5b6971">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+*
+FROM
+ food_items]]>
+	</queryString>
+	<field name="item_no" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="description" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="price" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="type" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="172" y="10" width="224" height="58" uuid="091d4281-1abe-43cb-b2ec-50b60639dd34"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Segoe UI Light" size="36" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Food Items]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="22" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="60" splitType="Stretch">
+			<staticText>
+				<reportElement x="11" y="2" width="65" height="20" uuid="bbf0317b-c865-4ba4-a10f-b5af7b67cd79"/>
+				<textElement>
+					<font fontName="Segoe UI Light" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[item_no]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="97" y="0" width="253" height="20" uuid="9511319b-f823-4671-86a5-e53a2c31d34c"/>
+				<textElement>
+					<font fontName="Segoe UI Light" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[description]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="460" y="2" width="67" height="20" uuid="bfdd0055-3b97-40df-9aa8-e547b35e50e5"/>
+				<textElement>
+					<font fontName="Segoe UI Light" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[type]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="372" y="2" width="68" height="20" uuid="e90fae8f-05ec-4fc5-936b-c6f236d398c2"/>
+				<textElement>
+					<font fontName="Segoe UI Light" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[price]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="37" splitType="Stretch">
+			<textField>
+				<reportElement x="11" y="0" width="65" height="20" uuid="786e5f4b-087e-46c1-8fd4-f145438b591b"/>
+				<textElement>
+					<font fontName="Segoe UI Light" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{item_no}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="97" y="0" width="253" height="20" uuid="7ae158fa-60b1-4c8c-9020-476637bdefb3"/>
+				<textElement>
+					<font fontName="Segoe UI Light" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{description}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="373" y="0" width="67" height="20" uuid="0be7e07f-6c5f-422c-8251-8e976c75755d"/>
+				<textElement>
+					<font fontName="Segoe UI Light" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{price}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="460" y="0" width="67" height="20" uuid="65e497c1-363e-41cb-8e8c-07d0f1051993"/>
+				<textElement>
+					<font fontName="Segoe UI Light" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{type}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="13" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="14" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="11" splitType="Stretch"/>
+	</summary>
+</jasperReport>
