@@ -6,10 +6,7 @@
 
 package myhotel.Admin;
 
-/**
- *
- * @author Pasan Sampath
- */
+
 import com.mysql.jdbc.Connection;
 import myhotel.db.DBConnect;
 import java.sql.PreparedStatement;
